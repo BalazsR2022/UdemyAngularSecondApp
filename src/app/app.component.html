@@ -1,6 +1,6 @@
 <app-header/>
 <main>
-    <ul id="users">
+    <ul userId="users">
       
             <li *ngFor="let user of users">
                 <app-user [user]="user" (select)="onSelectUser($event)" />
@@ -9,10 +9,10 @@
   </ul>
 
 
-       <app-tasks *ngIf="selectedUser; else fallback" [name]="selectedUser!.name" />
+       <app-tasks *ngIf="selectedUser;  else fallback" [userId]="selectedUser!.id" [name]="selectedUser!.name" /> 
 
        <ng-template #fallback>
-        <p id="fallback">Select a user to see their tasks!</p>
+        <p userId="fallback">Select a user to see their tasks!</p> 
        </ng-template>
 
         

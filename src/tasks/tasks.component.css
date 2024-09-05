@@ -51,6 +51,9 @@ ul {
   max-height: 50vh;
   overflow: auto;
 }
+ul li {
+  list-style-type: none; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+}
 
 @media (min-width: 768px) {
   h2 {
