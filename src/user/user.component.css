@@ -39,3 +39,6 @@ div {
     font-size: 0.8rem;
     font-weight: normal;
   }
+  ul li {
+    list-style-type: none; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+  }

@@ -37,4 +37,7 @@ main {
       font-size: 1.5rem;
       text-align: left;
     }
+    ul li {
+      list-style-type: none; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+    }
   }
