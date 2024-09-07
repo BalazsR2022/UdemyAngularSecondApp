@@ -5,7 +5,12 @@
   overflow: auto;
   background-color: #3a2c54;
 }
-
+input{
+  padding: 1rem;
+  max-height: 60vh;
+  overflow: auto;
+  background-color: #c7b3d8;
+}
 header {
   display: flex;
   justify-content: space-between;
