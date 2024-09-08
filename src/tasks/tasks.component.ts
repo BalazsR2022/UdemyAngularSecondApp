@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
+
 import { TaskComponent } from './task/task.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {  newTaskComponent } from "../app/tasks/newTask/newTask.component";
+import { type NewTaskData } from './task/task.model';
 
 
 @Component({
@@ -49,7 +51,10 @@ export class TasksComponent {
     summary: '',
     dueDate: ''
   }
-
+  trackByTaskId(index: number, task: { id: string }) {
+    return task.id;
+  }
+  
   get selectedUserTasks(){
     return this.tasks.filter((task) => task.userId === this.userId);
   }
@@ -81,6 +86,16 @@ export class TasksComponent {
   onCancelAddTask(){
     this.isAddingTask= false;
   }
-
+  
+  onAddTask (taskData: NewTaskData) {
+    this.tasks.unshift({
+      id: new Date().getTime().toString(),
+      userId: this.userId,
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.date
+    })
+    this.isAddingTask = false;
+  } 
 
 }

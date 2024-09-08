@@ -40,5 +40,10 @@ div {
     font-weight: normal;
   }
   ul li {
-    list-style-type: none; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+    list-style-type: none !important; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+  }
+  @media (max-width: 768px) {
+    ul li {
+      list-style-type: none !important; /* Biztosítja, hogy az li elemeknél se jelenjen meg pont */
+    }
   }
