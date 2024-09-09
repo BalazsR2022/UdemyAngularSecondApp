@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 import {type Task} from './task.model'
 import { CardComponent } from "../../app/shared/card/card.component";
@@ -9,7 +10,7 @@ import { CardComponent } from "../../app/shared/card/card.component";
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css'],
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, DatePipe],
   
 })
 export class TaskComponent {
