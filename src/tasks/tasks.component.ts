@@ -1,10 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-import { TaskComponent } from './task/task.component';
-import { CommonModule, NgFor } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import {  newTaskComponent } from "../app/tasks/newTask/newTask.component";
-import { type NewTaskData } from './task/task.model';
 import { TasksService } from './tasks.service';
 
 
@@ -12,9 +7,6 @@ import { TasksService } from './tasks.service';
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css'],
-  standalone: true,
-  imports: [TaskComponent, NgFor, CommonModule, FormsModule, newTaskComponent],
-  
 })
 export class TasksComponent {
 
