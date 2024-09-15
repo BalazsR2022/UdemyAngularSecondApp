@@ -17,6 +17,8 @@ import { TasksService } from './tasks.service';
   
 })
 export class TasksComponent {
+
+
   @Input({required: true}) userId!: string;
   @Input({required: true}) name!: string;
   isAddingTask =false;
@@ -34,35 +36,15 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.userId);
   }
 
-  onCompleteTask(id: string){
-     
-  }
-  // addTasks(){
-  //   if (this.newTask.id && this.newTask.title && this.newTask.summary && this.newTask.dueDate) {
-  //     const taskToAdd = { ...this.newTask, userId: this.userId };
-  //     this.tasks.push(taskToAdd);
+ 
 
-  //     // Clear input fields after adding the task
-  //     this.newTask = {
-  //       id: '',
-  //       title: '',
-  //       summary: '',
-  //       dueDate: ''
-  //     };
-  //   } else {
-  //     alert('Please fill in all fields!');
-  //   }
-
-  // }
-  onStartAddTask(){
-     this.isAddingTask = true;
-  }
-
-  onCancelAddTask(){
-    this.isAddingTask= false;
+  ontartAddTask(){
+    this.isAddingTask= true;
   }
   
-  onAddTask (taskData: NewTaskData) {
+  onCloseAddTask(){
+    this.isAddingTask = false;
   }
-
+  
+  
 }
